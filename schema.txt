@@ -1,0 +1,83 @@
+CREATE DATABASE IF NOT EXISTS ec;
+USE ec;
+
+CREATE TABLE weather_dim (
+    date DATE,
+    city VARCHAR(50),
+    temperature_C DECIMAL(5,2),
+    wind_speed_km_h DECIMAL(5,2),
+    solar_radiation_W_m2 DECIMAL(7,2),
+    PRIMARY KEY (date, city)
+);
+
+CREATE TABLE location_dim (
+    region VARCHAR(50),
+    city VARCHAR(50),
+    population INT,
+    urban_rural VARCHAR(20),
+    grid_coverage VARCHAR(20),
+    PRIMARY KEY (region)
+);
+
+CREATE TABLE customer_dim (
+    customer_id VARCHAR(10),
+    city VARCHAR(50),
+    customer_type VARCHAR(20),
+    tariff_plan VARCHAR(20),
+    monthly_consumption_kWh DECIMAL(10,2),
+    billing_zone VARCHAR(10),
+    PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE energy_sources_dim (
+    energy_source VARCHAR(50),
+    region VARCHAR(50),
+    potential_kW INT,
+    renewable VARCHAR(5),
+    efficiency INT,
+    PRIMARY KEY (energy_source)
+);
+
+CREATE TABLE consumption_dim (
+    city VARCHAR(50),
+    year INT,
+    total_consumption_MWh DECIMAL(10,2),
+    peak_consumption_MW DECIMAL(10,2),
+    off_peak_consumption_MWh DECIMAL(10,2),
+    PRIMARY KEY (city, year)
+);
+
+CREATE TABLE grid_infrastructure_dim (
+    substation_id VARCHAR(50),
+    region VARCHAR(50),
+    capacity_MW INT,
+    type VARCHAR(20),
+    commissioning_year INT,
+    PRIMARY KEY (substation_id)
+);
+
+CREATE TABLE energy_efficiency_dim (
+    region VARCHAR(50),
+    energy_savings_percent DECIMAL(10,8),
+    efficiency_rating DECIMAL(10,8)
+);
+
+CREATE TABLE load_shedding_dim (
+    region VARCHAR(50),
+    frequency INT,
+    duration_hours INT
+);
+
+CREATE TABLE maintenance_outage_dim (
+    region VARCHAR(50),
+    maintenance_type VARCHAR(50),
+    outage_duration_hours INT
+);
+
+CREATE TABLE demand_and_supply (
+    date TIMESTAMP,
+    city VARCHAR(50),
+    demand_MW DECIMAL(10,2),
+    supply_MW DECIMAL(10,2),
+    generation_source VARCHAR(50)
+);
