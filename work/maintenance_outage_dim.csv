@@ -1,0 +1,6 @@
+﻿region,maintenance_type,outage_duration_hours
+North,Scheduled,7
+North,Scheduled,7
+North,Unscheduled,6
+North,Scheduled,2
+North,Unscheduled,7

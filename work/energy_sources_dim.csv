@@ -1,0 +1,5 @@
+﻿energy_source,region,potential_kW,renewable,efficiency
+Hydropower,Centre,100000,TRUE,85
+Solar,Littoral,80000,TRUE,75
+Wind,North,50000,TRUE,65
+Thermal,South,120000,FALSE,70

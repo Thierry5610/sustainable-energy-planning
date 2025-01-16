@@ -1,0 +1,11 @@
+﻿substation_id,region,capacity_MW,type,commissioning_year
+Substation_0,Centre,879,Transformer,2010
+Substation_1,Centre,707,Transformer,2000
+Substation_2,Centre,214,Transformer,2000
+Substation_3,Centre,230,Transformer,2010
+Substation_4,Centre,249,Transformer,2012
+Substation_5,Centre,573,Transformer,2017
+Substation_6,Centre,621,Transformer,2009
+Substation_7,Centre,199,Transformer,2011
+Substation_8,Centre,930,Transformer,2024
+Substation_9,Centre,348,Transformer,2014
