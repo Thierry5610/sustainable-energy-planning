@@ -47,7 +47,7 @@ docker run -p 8888:8888 -v "$(pwd)":/home/jovyan/work jupyter/pyspark-notebook
 - The token for access will be displayed in the terminal where you ran the `docker run` command.
 
 6. Open and run the notebooks:
-- In the Jupyter interface, navigate to the `work` directory.
+- In the Jupyter interface, navigate to the directory.
 - Open and run the notebooks.
 
 ---
@@ -77,7 +77,7 @@ jupyter notebook
 ```
 
 5. Open and run the notebooks:
-- In the Jupyter interface, navigate to the `root` directory (if applicable).
+- In the Jupyter interface, navigate to the project directory
 - Open and run the notebooks.
 
 ---
